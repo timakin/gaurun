@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/mercari/gaurun/gcm"
-
 	"go.uber.org/zap"
 )
 
@@ -37,6 +36,7 @@ type RequestGaurunNotification struct {
 	Sound            string       `json:"sound,omitempty"`
 	ContentAvailable bool         `json:"content_available,omitempty"`
 	MutableContent   bool         `json:"mutable_content,omitempty"`
+	ThreadID         string       `json:"thread_id,omitempty"`
 	Expiry           int          `json:"expiry,omitempty"`
 	Retry            int          `json:"retry,omitempty"`
 	Extend           []ExtendJSON `json:"extend,omitempty"`
